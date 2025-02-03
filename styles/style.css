@@ -108,6 +108,7 @@ ol {
   overflow: auto;
 }
 
+/* Исправлено */
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
@@ -115,7 +116,7 @@ ol {
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
-  height: 210px;
+  /* height: 210px убран. Был добавлен из-за того, что блок title почему-то растягивался на 211.5 px, откуда берутся лишние 1.5px так и не смог выяснить :( */
 }
 
 .content__list {
@@ -150,17 +151,28 @@ ol {
   border: none;
 }
 
+/* Исправлено */
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   margin-bottom: 5px;
 }
 
+/* Исправлено */
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  outline: none;
 }
 
 .content__video-card-description-container {
@@ -181,18 +193,16 @@ ol {
   margin-bottom: 6px;
 }
 
+/* Исправлено */
 .content__video-card-description {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 17px;
-  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  line-clamp: initial;
 }
 
 .button {
@@ -234,6 +244,7 @@ ol {
   outline: 1px solid;
 }
 
+/* Исправлено */
 .search-form__textfield {
   font-family: Fira Sans Condensed;
   font-size: 18px;
@@ -252,6 +263,10 @@ ol {
 .search-form__textfield:active {
   border: 1px solid #fff;
   outline: none;
+}
+
+.search-form__label:has(.search-form__textfield:hover) {
+  text-decoration: none;
 }
 
 .search-form__label:has(.search-form__textfield:active) {
@@ -320,3 +335,4 @@ ol {
   padding-left: 3px;
   padding-right: 3px;
 }
+
