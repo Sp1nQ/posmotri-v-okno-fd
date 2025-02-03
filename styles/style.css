@@ -74,12 +74,14 @@ ol {
 
 .result {
   grid-area: result;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 78px;
 }
 
 .result__video-container {
+  position: relative;
   height: 386px;
   margin-bottom: 16px;
 }
@@ -101,6 +103,7 @@ ol {
 }
 
 .content__list-container {
+  position: relative;
   max-height: 298px;
   overflow: auto;
 }
