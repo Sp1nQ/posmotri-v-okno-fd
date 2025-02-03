@@ -247,10 +247,6 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: white solid 1px;
-}
-
-.search-form__textfield:active {
   border: 1px solid #fff;
   outline: none;
 }
